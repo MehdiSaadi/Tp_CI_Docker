@@ -23,8 +23,8 @@ jobs:
             - node-v1-{{ .Branch }}-
             - node-v1-
       - run: |
-          docker build -t Tp_CI_Docker:SNAPSHOT .
-          docker run -d -p 8080:8080 Tp_CI_Docker:SNAPSHOT
+          docker build -t tp_ci_docker:SNAPSHOT .
+          docker run -d -p 8080:8080 tp_ci_docker:SNAPSHOT
       - run: |
           curl -v http://localhost:8080/users
 
