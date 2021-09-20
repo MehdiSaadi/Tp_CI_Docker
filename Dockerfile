@@ -1,4 +1,4 @@
- FROM node:current-alpine3.14
+FROM node:current-alpine3.14
 COPY . /app
 WORKDIR /app
 RUN npm ci
