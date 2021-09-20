@@ -23,8 +23,8 @@ jobs:
             - node-v1-{{ .Branch }}-
             - node-v1-
       - run: |
-          docker build -t ci-course-main:SNAPSHOT .
-          docker run -d -p 8080:8080 ci-course-main:SNAPSHOT
+          docker build -t Tp_CI_Docker:SNAPSHOT .
+          docker run -d -p 8080:8080 Tp_CI_Docker:SNAPSHOT
       - run: |
           curl -v http://localhost:8080/users
 
@@ -35,8 +35,8 @@ jobs:
       - checkout
       - run: |
           docker login --username $DOCKER_LOGIN --password $DOCKER_PASSWORD
-          docker build -t MehdiSaadi/Tp_CI_Docker/ci-course-main .
-          docker push MehdiSaadi/Tp_CI_Docker/ci-course-main
+          docker build -t MehdiSaadi/Tp_CI_Docker .
+          docker push MehdiSaadi/Tp_CI_Docker
 workflows:
   version: 2
   custom_workflow:
