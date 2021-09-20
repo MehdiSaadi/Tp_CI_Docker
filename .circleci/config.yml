@@ -1,0 +1,10 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: node:current-alpine
+    steps:
+      - run:
+          name: Run the project
+          command: |
+            npm start
