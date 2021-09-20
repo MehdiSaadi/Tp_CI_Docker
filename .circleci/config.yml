@@ -35,8 +35,8 @@ jobs:
       - checkout
       - run: |
           docker login --username $DOCKER_LOGIN --password $DOCKER_PASSWORD
-          docker build -t mehdisaadi/tp_ci_docker .
-          docker push mehdisaadi/tp_ci_docker
+          docker build -t mehdi88/tp_ci_docker .
+          docker push mehdi88/tp_ci_docker
 workflows:
   version: 2
   custom_workflow:
